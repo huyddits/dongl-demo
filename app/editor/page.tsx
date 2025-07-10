@@ -243,7 +243,7 @@ export default function EditorPage() {
             <CardContent className={`${isFullscreen ? 'p-4 h-full' : 'p-6'}`}>
               <Editor
                 apiKey="mdw8t0d7iws0ttjj440lh9ew605iy7oybwojhs577cjsnqb7" // Thay bằng API key thật hoặc bỏ để dùng domain localhost
-                onInit={(evt, editor) => editorRef.current = editor}
+                onInit={(evt: any, editor: any) => editorRef.current = editor}
                 initialValue="<p>Start writing your document...</p>"
                 value={content}
                 onEditorChange={handleEditorChange}
@@ -343,7 +343,7 @@ export default function EditorPage() {
                   paste_data_images: true,
                   automatic_uploads: true,
                   file_picker_types: 'image',
-                  file_picker_callback: function (cb, value, meta) {
+                  file_picker_callback: function (cb: any, value: any, meta: any) {
                     const input = document.createElement('input')
                     input.setAttribute('type', 'file')
                     input.setAttribute('accept', 'image/*')
@@ -361,7 +361,7 @@ export default function EditorPage() {
 
                     input.click()
                   },
-                  setup: (editor) => {
+                  setup: (editor: any) => {
                     editor.on('init', () => {
                       console.log('TinyMCE editor initialized')
                     })
