@@ -8,7 +8,7 @@ import { useState } from 'react'
 
 interface AddressSelectionProps {
   selectedAddress: string | null
-  setSelectedAddress: (address: string) => void
+  setSelectedAddress: (address: any) => void
   customAddress: string
   setCustomAddress: (address: string) => void
 }
